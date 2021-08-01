@@ -10,7 +10,8 @@ let languageCodes = [
     "es-419",
 ]
 
-var selectedLanguage = null;
+var selectedLanguage = "es";
+var selectedVoice = null;
 
 /**
  * 
@@ -25,6 +26,7 @@ export const setupSpanishSpeechSynthesis = () => {
         languageCodes.forEach(function(languageCode, i) {
             if (languageCode == voice.lang) {
                 selectedLanguage = voice.lang;
+                selectedVoice = voice;
                 return;
             }
         });
@@ -43,5 +45,6 @@ export const speakWord = (word) => {
     }
     var utterThis = new SpeechSynthesisUtterance(word);
     utterThis.lang = selectedLanguage;
+    utterThis.voice = selectedVoice;
     speechSynthesis.speak(utterThis);
 }

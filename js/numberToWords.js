@@ -37,7 +37,7 @@ export const convertNumberToText = (number) => {
         7: 'setenta',
         8: 'ochenta',
         9: 'noventa',
-        10: 'cien'
+        0: 'cien'
     };
 
     if (number > 199 || number < 0) {
