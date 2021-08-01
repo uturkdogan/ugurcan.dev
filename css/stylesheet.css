@@ -1,0 +1,45 @@
+@media (prefers-color-scheme: light) {
+  body {
+      background-color: white;
+      color: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: black;
+      color: white;
+  }
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 40px);
+  flex-flow: column;
+}
+
+.bottom-box {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.top-box {
+  position: absolute;
+  padding: 5px;
+}
+
+body { 
+  margin: 0;
+}
+
+.mb-zero {
+  margin-bottom: 0;
+}
+
+.hidden {
+  display: none;
+}
